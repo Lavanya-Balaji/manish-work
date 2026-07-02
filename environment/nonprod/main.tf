@@ -14,3 +14,28 @@ module "database_rg" {
   tags                = var.tags
 }
 
+module "primary_sql_server" {
+  source = "../../modules/sql-server"
+
+  name                = local.primary_sql_server_name
+  resource_group_name = module.primary_database_rg.name
+  location            = var.primary_location
+
+  administrator_login    = var.sql_admin_login
+  administrator_password = var.sql_admin_password
+
+  tags = var.tags
+}
+
+module "secondary_sql_server" {
+  source = "../../modules/sql-server"
+
+  name                = local.secondary_sql_server_name
+  resource_group_name = module.secondary_database_rg.name
+  location            = var.secondary_location
+
+  administrator_login    = var.sql_admin_login
+  administrator_password = var.sql_admin_password
+
+  tags = var.tags
+}
