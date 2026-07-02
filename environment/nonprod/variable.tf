@@ -14,3 +14,11 @@ variable "tags" {
   type    = map(string)
   default = {}
 }
+variable "sql_admin_login" {
+  type = string
+}
+
+variable "sql_admin_password" {
+  type      = string
+  sensitive = true
+}
