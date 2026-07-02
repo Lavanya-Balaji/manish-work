@@ -1,0 +1,50 @@
+# Terraform working directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Terraform lock file
+# Uncomment the next line if you do NOT want to commit it.
+# Recommended: Commit .terraform.lock.hcl
+# .terraform.lock.hcl
+
+# Variable files containing secrets
+*.auto.tfvars
+*.auto.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform test files
+.terraform.tfstate.lock.info
+
+# Editor folders
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
