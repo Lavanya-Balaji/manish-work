@@ -22,9 +22,6 @@ terraform.rc
 # Recommended: Commit .terraform.lock.hcl
 # .terraform.lock.hcl
 
-# Variable files containing secrets
-*.auto.tfvars
-*.auto.tfvars.json
 
 *.tfvars
 *.tfvars.json
