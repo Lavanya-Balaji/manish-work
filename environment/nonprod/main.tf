@@ -19,7 +19,7 @@ module "primary_sql_server" {
 
   name                = local.primary_sql_server_name
   resource_group_name = module.database_rg.name
-  location            = module.database_rg.location
+  location            = var.primary_location
 
   administrator_login    = var.sql_admin_login
   administrator_password = var.sql_admin_password
@@ -32,7 +32,7 @@ module "secondary_sql_server" {
 
   name                = local.secondary_sql_server_name
   resource_group_name = module.database_rg.name
-  location            = module.database_rg.location
+  location            = var.secondary_location
 
   administrator_login    = var.sql_admin_login
   administrator_password = var.sql_admin_password
